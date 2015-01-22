@@ -88,7 +88,7 @@ class MarginaliaTest < Test::Unit::TestCase
     # Because "lines_to_ignore" by default includes "marginalia" and "gem", the
     # extracted line line will be from the line in this file that actually
     # triggers the query.
-    assert_match %r{/\*line:test/query_comments_test.rb:[0-9]+:in `driver_only'\*/$}, @queries.first
+    assert_match %r{/\*line:test/query_comments_test.rb:[0-9]+:in driver_only\*/$}, @queries.first
   end
 
   def test_last_line_component_with_lines_to_ignore

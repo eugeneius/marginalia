@@ -59,7 +59,7 @@ module Marginalia
           if last_line.starts_with? root
             last_line = last_line[root.length..-1]
           end
-          last_line
+          last_line.gsub('`', '').gsub('\'', '')
         end
       end
 
